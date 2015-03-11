@@ -43,9 +43,16 @@ body {
   height: 385px;
 }
 
+.cover-pueo {
+  background-image: url('../images/cover-pueo-page.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 385px;
+}
+
 .tagline_bar {
   background-color: black;
-  height: 131px;
+  height: 200px;
   padding: 1em 0 0 0;
 }
 

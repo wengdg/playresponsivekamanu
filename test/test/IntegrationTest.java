@@ -24,7 +24,10 @@ public class IntegrationTest {
     running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
       public void invoke(TestBrowser browser) {
         browser.goTo("http://localhost:3333");
-        assertThat(browser.pageSource()).contains("Kamanu");
+        assertThat(browser.pageSource()).contains("canoes");
+
+        browser.goTo("http://localhost:3333/pueo");
+        assertThat(browser.pageSource()).contains("versatile");
       }
     });
   }
