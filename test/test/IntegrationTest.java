@@ -17,7 +17,7 @@ import static play.test.Helpers.testServer;
 public class IntegrationTest {
 
   /**
-   * Check to that index page can be retrieved.
+   * Check to that all pages can be received.
    */
   @Test
   public void test() {
@@ -28,6 +28,15 @@ public class IntegrationTest {
 
         browser.goTo("http://localhost:3333/pueo");
         assertThat(browser.pageSource()).contains("versatile");
+
+        browser.goTo("http://localhost:3333/aukahi");
+        assertThat(browser.pageSource()).contains("attitude");
+
+        browser.goTo("http://localhost:3333/v6");
+        assertThat(browser.pageSource()).contains("exciting");
+
+        browser.goTo("http://localhost:3333/about");
+        assertThat(browser.pageSource()).contains("amazing");
       }
     });
   }
